@@ -1722,12 +1722,17 @@ class JobExportHistoryArchive(RepresentById):
         }
 
 
-class JobImportHistoryArchive(RepresentById):
+class JobUploadFileToHistory(RepresentById):
     def __init__(self, job=None, history=None, archive_dir=None):
         self.job = job
         self.history = history
         self.archive_dir = archive_dir
 
+class JobImportHistoryArchive(RepresentById):
+    def __init__(self, job=None, history=None, archive_dir=None):
+        self.job = job
+        self.history = history
+        self.archive_dir = archive_dir
 
 class JobContainerAssociation(RepresentById):
     def __init__(self, job=None, container_type=None, container_name=None, container_info=None):
